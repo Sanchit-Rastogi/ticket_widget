@@ -23,155 +23,173 @@ class Home extends StatelessWidget {
         title: Text('Widget'),
       ),
       body: Center(
-        child: Container(
+        child: Card(
+          elevation: 10,
           margin: EdgeInsets.all(20),
-          width: double.infinity,
-          height: 250,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.black,
-              width: 1,
+          child: ClipPath(
+            clipper: ShapeBorderClipper(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
             ),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Column(
-            children: <Widget>[
-              Expanded(
-                flex: 3,
-                child: Container(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 20,
-                    horizontal: 20,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Icon(Icons.airplanemode_active),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            "treva.",
-                            style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Text("127543319A83"),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Icon(Icons.filter_none),
-                        ],
-                      ),
-                    ],
-                  ),
+            child: Container(
+              width: double.infinity,
+              height: 250,
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(color: Colors.tealAccent, width: 3),
+                  bottom: BorderSide(color: Colors.black12, width: 1),
+                  right: BorderSide(color: Colors.black12, width: 1),
+                  left: BorderSide(color: Colors.black12, width: 1),
                 ),
               ),
-              Expanded(
-                flex: 3,
-                child: Stack(
-                  children: <Widget>[
-                    Container(
-                      width: double.infinity,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 20,
+                        horizontal: 20,
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Container(
-                            decoration: BoxDecoration(
-                              border: Border(
-                                top: BorderSide(width: 1, color: Colors.black),
-                                right:
-                                    BorderSide(width: 1, color: Colors.black),
-                                bottom:
-                                    BorderSide(width: 1, color: Colors.black),
+                          Row(
+                            children: <Widget>[
+                              Icon(Icons.airplanemode_active),
+                              SizedBox(
+                                width: 10,
                               ),
-                            ),
-                            width: pWidth * 0.40,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
-                                Text(
-                                  "New York",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                              Text(
+                                "treva.",
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w700,
                                 ),
-                                Text("21A St-31"),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                          Container(
-                            width: pWidth * 0.40,
-                            decoration: BoxDecoration(
-                              border: Border(
-                                top: BorderSide(width: 1, color: Colors.black),
-                                left: BorderSide(width: 1, color: Colors.black),
-                                bottom:
-                                    BorderSide(width: 1, color: Colors.black),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Text("127543319A83"),
+                              SizedBox(
+                                width: 10,
                               ),
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
-                                Text(
-                                  "Riyadh",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                Text("21A St-31"),
-                              ],
-                            ),
+                              Icon(Icons.filter_none),
+                            ],
                           ),
                         ],
                       ),
                     ),
-                    Expanded(
-                      child: Container(
-                        margin:
-                            EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          shape: BoxShape.circle,
-                          border: Border.all(width: 1, color: Colors.black),
+                  ),
+                  Expanded(
+                    flex: 3,
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          width: double.infinity,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Container(
+                                decoration: BoxDecoration(
+                                  border: Border(
+                                    top: BorderSide(
+                                        width: 1, color: Colors.black38),
+                                    right: BorderSide(
+                                        width: 1, color: Colors.black38),
+                                    bottom: BorderSide(
+                                        width: 1, color: Colors.black38),
+                                  ),
+                                ),
+                                width: pWidth * 0.44,
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: <Widget>[
+                                    Text(
+                                      "New York",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                    Text("21A St-31"),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                width: pWidth * 0.44,
+                                decoration: BoxDecoration(
+                                  border: Border(
+                                    top: BorderSide(
+                                        width: 1, color: Colors.black38),
+                                    left: BorderSide(
+                                        width: 1, color: Colors.black38),
+                                    bottom: BorderSide(
+                                        width: 1, color: Colors.black38),
+                                  ),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: <Widget>[
+                                    Text(
+                                      "Riyadh",
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                    Text("21A St-31"),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                        child: Center(
-                            child: Icon(
-                          Icons.arrow_forward,
-                          size: 30,
-                        )),
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.symmetric(
+                                horizontal: 30, vertical: 30),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                              border:
+                                  Border.all(width: 1, color: Colors.black38),
+                            ),
+                            child: Center(
+                                child: Icon(
+                              Icons.arrow_forward,
+                              size: 20,
+                              color: Colors.lightBlue,
+                            )),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 5,
+                        horizontal: 20,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text('30/03/2020'),
+                          Text('1 day ago'),
+                        ],
                       ),
                     ),
-                  ],
-                ),
-              ),
-              Expanded(
-                flex: 2,
-                child: Container(
-                  padding: EdgeInsets.symmetric(
-                    vertical: 5,
-                    horizontal: 20,
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text('30/03/2020'),
-                      Text('1 day ago'),
-                    ],
-                  ),
-                ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ),
